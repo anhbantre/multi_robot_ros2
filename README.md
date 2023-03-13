@@ -1,12 +1,12 @@
 # Multi-robot in ROS2
 
-This is a fundamental repository used when multiple system robots (ROS2) have the same architecture (also same topics, nodes, ...) within the same network. It can recognize itself and with others without conflict. Each robot has unique name `ROBOT_NAME`. For instance, in this repo, the robot has the name `robot1`.
+This is a fundamental repository used when multiple system robots (ROS2) have the same architecture (also the same topics, nodes, ...) within the same network. It can recognize itself and others without conflict. Each robot has a unique name `ROBOT_NAME`. For instance, in this repo, the robot has the name `robot1`.
 
-You can run two robots by clone this repository in two devices, make sure both are connected to the same network and change the different name `ROBOT_NAME` for each robot.
+You can run two robots by cloning this repository in two devices, ensuring both are connected to the same network and changing the different name `ROBOT_NAME` for each robot.
 
 ## Usage
 
-To change different name for each robot, change the `ROBOT_NAME` variable at line 12 in launch file `multi_machine/launch/multi_launch.py`:
+To change the different name for each robot, change the `ROBOT_NAME` variable at line 12 in the launch file `multi_machine/launch/multi_launch.py`:
 ```
 ROBOT_NAME = 'robot1'
 ```
