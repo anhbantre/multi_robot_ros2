@@ -35,3 +35,40 @@ To check data the node is received:
 ```
 ros2 topic echo /robot1/my_topic
 ```
+
+## Build a snap package
+
+Let's package this application as a snap to deploy on other robotics devices. This repository uses Jetson Xavier NX with:
+- Jetpack 5.0.2 GA
+- Ubuntu 20.04
+- `arm64` architecture platform
+
+First, install snapcraft:
+```
+sudo snap install --classic snapcraft
+```
+
+To install core20:
+```
+sudo snap install core20
+```
+
+Now let's build the snap:
+```
+snapcraft --enable-experimental-extensions --destructive-mode
+```
+
+For quick running without building, if you use it on the same device, download the built snap [here](https://drive.google.com/file/d/1XrUCOwf83eowDTVol0eeAhx3A_yk6k3e/view?usp=sharing)
+
+When this snap build completely, let's install it:
+```
+sudo snap install <your_snap_file_name>.snap --devmode
+```
+
+Finally, run it:
+```
+ros2-multi
+```
+
+## Reference
+[Packaging your ROS 2 application as a snap](https://docs.ros.org/en/foxy/Tutorials/Miscellaneous/Packaging-your-ROS-2-application-as-a-snap.html#id5)
