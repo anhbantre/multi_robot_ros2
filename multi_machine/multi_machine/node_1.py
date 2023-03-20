@@ -32,6 +32,7 @@ class MyNode(Node):
         message = String()
         message.data = self.node_name
         self.publisher.publish(message)
+        self.get_logger().info(F"Parameter: {self.my_param}")
 
 def main(args=None):
     rclpy.init(args=args)
