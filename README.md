@@ -4,6 +4,10 @@ This is a fundamental repository used when multiple system robots (ROS2) have th
 
 You can run two robots by cloning this repository in two devices, ensuring both are connected to the same network and changing the different name `ROBOT_NAME` for each robot.
 
+<div align="center">
+    <img src="img/chart.png" width="70%"/>
+</div>
+
 ## Usage
 
 To change the different name for each robot, change the `ROBOT_NAME` variable at line 12 in the launch file `multi_machine/launch/multi_launch.py`:
@@ -70,5 +74,19 @@ Finally, run it:
 ros2-multi
 ```
 
+Result:
+```
+[node_1-1] [INFO] [1679278253.059005344] [node_1_robot1]: Parameter: param1
+[node_1-1] [INFO] [1679278254.019700651] [node_1_robot1]: Parameter: param1
+[node_1-1] [INFO] [1679278255.018450358] [node_1_robot1]: Parameter: param1
+```
+
+It will get parameters in launch file and print it out.
+
 ## Reference
 [Packaging your ROS 2 application as a snap](https://docs.ros.org/en/foxy/Tutorials/Miscellaneous/Packaging-your-ROS-2-application-as-a-snap.html#id5)
+
+## Author
+
+Nguyen Huy An  
+Email: anhuynguyen001@gmail.com
